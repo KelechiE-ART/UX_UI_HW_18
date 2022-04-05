@@ -4,7 +4,7 @@ inline-block {
 }
 
 body {
-  background-color: lavender;
+  background-image: linear-gradient(lavender, pink, skyblue);
 }
 
 .logo {
@@ -93,4 +93,125 @@ body {
   width: 300px;
   transform: translate(150%, -160%);
   align-content: center;
+}
+
+<!--  My UX Skills section coded using CSS flex --
+
+.mySkills h2 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  color: indigo;
+  font-size: 3pc;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+.mySkills img {
+  float: left;
+  justify-content: left;
+  padding: 15px;
+}
+
+.mySkills h3 {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+}
+
+.mySkills p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.flexContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 5px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.mySkills h1 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  color: indigo;
+  font-size: 3pc;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+    <!-- My Work Section Constructed using CSS Grid --
+
+.myWork {
+  flex-direction: rows; 
+  grid-area: workGrid;
+}
+.workGrid {
+  margin: 0px 5;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-areas: 
+    "TravelBound Artverse DOE"
+    ;
+}
+div#TravelBound {
+    grid-area: TravelBound;
+}
+
+div#Artverse {
+  grid-area: Artverse;
+}
+
+div#DOE {
+  grid-area: DOE;
+}
+
+.myWork p {
+  display: inline-block;
+  width: 30%;
+  align-items: center;
+}
+
+.myWork h4 {
+  display: flex;
+  color: slateblue;
+  font-size: 2pc;
+  text-align: center;
+}
+.myWork button {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.myWork h1 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  color: darkslateblue;
+  font-size: 3pc;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600){
+  .myWork {
+    flex-direction: column; 
+    width: 100%;
+    grid-area: workGrid;
+  }
+
+  .workGrid {
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+       "TravelBound"
+       "Artverse"
+       "DOE"
+      ;
+  }
 }
